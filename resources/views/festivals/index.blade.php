@@ -1,5 +1,5 @@
 <x-app-layout>
-    <h1 style="text-align: center;font-size: 40px;padding: 10px;">ALL FESTIVALS</h1>
+    <h1 style="text-align: center;font-size: 40px;padding: 10px;background-color: orange;color: white; border-radius: 50px; ">ALL FESTIVALS</h1>
     @foreach ($festivals as $festival)
     <div style="display: inline-block;margin: 5px 10px 5px 10px; text-align: center;  width:28%;" class="card min-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         @if ($festival->user->is(auth()->user()))

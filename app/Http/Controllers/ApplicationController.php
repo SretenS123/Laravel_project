@@ -28,6 +28,10 @@ class ApplicationController extends Controller
         //
     }
 
+    public function success()
+    {
+        return view('applications.success');
+    }
     /**
      * Store a newly created resource in storage.
      */
@@ -39,10 +43,9 @@ class ApplicationController extends Controller
             'people' => 'required|numeric',
             'ask' => 'required|string',
         ]);
-
         $request->user()->applications()->create($validated);
 
-        return redirect(route('applications.index'));
+        return view('applications.success');
     }
 
     /**

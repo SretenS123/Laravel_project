@@ -1,28 +1,28 @@
-<nav x-data="{ open: false }" style="background-color: lightskyblue" class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
+<nav x-data="{ open: false }" style="background-color: lightskyblue; height: 150px" class="dark:bg-blue-600 dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 p-4">
         <div class="flex justify-between h-16">
-            <div class="flex">
+            <div  class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                     <img src="https://scontent.fskp4-1.fna.fbcdn.net/v/t39.30808-1/326274452_870306124228855_6689985024167196265_n.jpg?stp=dst-jpg_p480x480&_nc_cat=105&ccb=1-7&_nc_sid=754033&_nc_ohc=BmwyajdFgr4AX_Fjr4E&_nc_ht=scontent.fskp4-1.fna&oh=00_AfDg-YF1LtnO_A9pPEtWjztRD5nh-1H4cYjW2fN3KCz-WQ&oe=650F6D3E" height="60px"width="50px">
+                     <img style="padding: 2%;"  src="{{asset('assets/images/wofa.png')}}"  height="80px"width="80px">
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                    <x-nav-link style="color: white;" :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        {{ __('DASHBOARD') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('festivals.index')" :active="request()->routeIs('festivals.index')">
-                        {{ __('Festivals') }}
+                    <x-nav-link  style="color: white;"  :href="route('festivals.index')" :active="request()->routeIs('festivals.index')">
+                        {{ __('FESTIVALS') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('createFestival')" :active="request()->routeIs('createFestival')">
-                        {{ __('Create Festival') }}
+                    <x-nav-link style="color: white;"  :href="route('createFestival')" :active="request()->routeIs('createFestival')">
+                        {{ __('CREATE FESTIVAL') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('applications.index')" :active="request()->routeIs('applications.index')">
-                        {{ __('My Applications') }}
+                    <x-nav-link style="color: white;"  :href="route('applications.index')" :active="request()->routeIs('applications.index')">
+                        {{ __('MY  APPLICATIONS') }}
                     </x-nav-link>
                 </div>
             </div>

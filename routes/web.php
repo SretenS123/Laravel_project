@@ -23,6 +23,9 @@ Route::get('/', function () {
 Route::get('/festivals/create', function () {
     return view('festivals.store');
 })->middleware(['auth', 'verified'])->name('createFestival');
+Route::get('/festivals/application/success', function () {
+    return view('applications.success');
+})->middleware(['auth', 'verified'])->name('application.success');
 
 Route::resource('festivals', FestivalController::class)
     ->only(['index', 'store','edit','update','destroy'])

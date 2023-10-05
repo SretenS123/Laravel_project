@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Festival;
+use App\Models\Role;
+use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -14,6 +16,7 @@ class FestivalController extends Controller
      */
     public function index()
     {
+
         $festivals = Festival::with("user")->get();
             return view('festivals.index',
             [
@@ -41,7 +44,7 @@ class FestivalController extends Controller
            'image' => 'required|string'
        ]);
         $request->user()->festivals()->create($validated);
-
+        $request->user()->roles()->create('admin');
         return redirect(route('festivals.index'));
     }
 
